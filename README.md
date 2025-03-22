@@ -1,20 +1,36 @@
-  Python 3.6+
-  Node.js 14+
-  Redis 5       
-  MariaDB 10.3.x / Postgres 9.5.x 
-  yarn 1.12+   
-  pip 20+      
-  wkhtmltopdf (version 0.12.5 with patched qt) 
-  cron            
-  NGINX 
-
-
-Step-1
-Testing Testing 2222222222222222
-222222222222222222222222222222
-
-Step-2
-Tesiting Two 3333333333333333333333
-555555555555555555555555555555555555555555555555555555555555
-
-  
+bench start
+bench new-site print-designer.test
+bench --site print-designer.test add-to-hosts
+bench get-app https://github.com/frappe/print_designer
+bench --site print-designer.test install-app print_designer
+ 
+//Check Installed App List
+bench --site site1.local list-apps
+ 
+--------------------
+IF Not Working
+--------------------
+ 
+bench --site site1.local clear-cache
+bench --site site1.local clear-website-cache
+bench --site site1.local reload-doc print_designer
+bench --site site1.local migrate
+ 
+bench --site site1.local list-apps
+ 
+----------------
+//If Not Working..........
+----------------
+ 
+//Uninstall the App:
+bench --site site1.local uninstall-app print_designer
+ 
+//Reinstall the App:......
+bench --site site1.local install-app print_designer
+ 
+//Restart Supervisor......
+sudo supervisorctl restart all
+ 
+ 
+ 
+Restart Your Computer.........
